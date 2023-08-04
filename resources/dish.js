@@ -26,9 +26,9 @@ async function findById(id_product) {
 }
 
 
-async function addInventory(material) {
+async function addInventory(dataDish) {
     try {
-        const response = await fetch(url, { method: 'POST', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(material) });
+        const response = await fetch(url, { method: 'POST', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(dataDish) });
         if (!response) {
             throw new error('ERROR API');
         }
@@ -36,20 +36,6 @@ async function addInventory(material) {
         console.log(error);
     }
 }
-
-async function addInventory(material) {
-    try {
-        const response = await fetch(url, { method: 'POST', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(material) });
-        if (!response) {
-            throw new error('ERROR API');
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-
-
 
 module.exports.loadDish = loadDish;
 module.exports.addInventory = addInventory;

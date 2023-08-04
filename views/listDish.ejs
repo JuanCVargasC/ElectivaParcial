@@ -27,8 +27,8 @@
                 <div class="collapse navbar-collapse" id="navbarHeader">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         
-                        <!--<li class="nav-item"><a href="/add" class="nav-link active">Find Dish</a></li>-->
                         <li class="nav-item"><a href="/add" class="nav-link active">add Dishes</a></li>
+                        <li class="nav-item"><a href="/" class="nav-link active">Find Dish</a></li>
                     </ul>
 
                 </div>
@@ -45,34 +45,34 @@
                     <thead class="thead-light">
                         <tr>
                             <th>Id</th>
-                            <th>nombre</th>
+                            <th>Nombre</th>
                             <th>Calorias</th>
                             <th>Vegetariano</th>
-                            <th>Precio</th>
+                            <th>Value</th>
                             <th>Descripcion</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% data.forEach(plato=> {
+                        <% data.forEach(dish=> {
                             %>
                             <tr>
                                 <td>
-                                    <%= plato.idDish %>
+                                    <%= dish.idDish %>
                                 </td>
                                 <td>
-                                    <%= plato.name %>
+                                    <%= dish.name %>
                                 </td>
                                 <td>
-                                    <%= plato.calories %>
+                                    <%= dish.calories %>
                                 </td>
                                 <td>
-                                    <%= plato.isVegetarian %>
+                                    <%= dish.isVegetarian %>
                                 </td>
                                 <td>
-                                    <%= plato.value %>
+                                    <%= dish.value %>
                                 </td>
                                 <td>
-                                    <%= plato.comments %>
+                                    <%= dish.comments %>
                                 </td>
 
                             </tr>
@@ -80,7 +80,7 @@
                     </tbody>
                 </table>
                 <% } else { %>
-                    <h4>Sin registros</h4>
+                    <h4>NO registros</h4>
                     <% } %>
             </div>
     </div>

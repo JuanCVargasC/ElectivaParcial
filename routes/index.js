@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
 router.get('/add', (req, res) => {
 
-    res.render('addDish', { 'title': 'Add Dish' })
+    res.render('addDish', { 'title': 'List Dish' })
 })
 
 router.post('/add', async (req, res) => {

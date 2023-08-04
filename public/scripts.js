@@ -6,6 +6,8 @@ async function getDish() {
       }
       const dataDish = await respuesta.json();
       console.log(dataDish);
+      console.log("scripget");
+
     } catch (error) {
       console.error('Error data:', error.message);
     }
